@@ -1,14 +1,14 @@
 # Professional Data API
 
 ## Table of Contents
-1. [**About It**](#About It)
-2. [**Getting things ready**](#Getting things ready)
-    1. [**Installing Ruby and Rails**](#Installing Ruby and Rails)
-    1. [**Configuring environment**](#Configuring environment)
+1. [**About It**](#About)
+2. [**Getting things ready**](#Getting)
+    1. [**Installing Ruby and Rails**](#Installing)
+    1. [**Configuring environment**](#Configuring)
 3. [**Contributing**](#Contributing)
-4. [**Notes to Consider**](#Notes to Consider)
+4. [**Notes to Consider**](#Notes)
 
-## About It
+## About it
 
 This API is meant for showing your professional and/or 
 scientific data in a simple way, so you can concentrate 
@@ -95,10 +95,10 @@ variable is a dynamic "object" on a computer, containing
 an editable value, which may be used by one or more 
 software programs. In this project there are 3 very
 important ones
-* PG_USER -- PostgrSQL username [1](#PostgreSQL variables)
-* PG_PSW -- PostgrSQL password [1](#PostgreSQL variables)
-* YOUR_KEY -- Whenever you try to make a POST|PUT|PATCH request
-    you'll need to have this key [2](#App Key)
+* `PG_USER` -- PostgrSQL username [1](#PostgreSQL)
+* `PG_PSW` -- PostgrSQL password [1](#PostgreSQL)
+* `APP_KEY` -- Whenever you try to make a POST|PUT|PATCH request
+    you'll need to have this key [2](#App)
 
 You have two manners of including these variables. First is
 shown above. The other manner, but a little less safe is 
