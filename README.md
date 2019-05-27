@@ -1,12 +1,12 @@
 # Professional Data API
 
 ## Table of Contents
-1. [**About It**](#About)
-2. [**Getting things ready**](#Getting)
-    1. [**Installing Ruby and Rails**](#Installing)
-    1. [**Configuring environment**](#Configuring)
-3. [**Contributing**](#Contributing)
-4. [**Notes to Consider**](#Notes)
+1. **About It**
+2. **Getting things ready**
+    1. **Installing Ruby and Rails**
+    1. **Configuring environment**
+3. **Contributing**
+4. **Notes to Consider**
 
 ## About it
 
@@ -90,15 +90,15 @@ user@pc $ rake db:migrate # run migrations
 
 #### About the Environment Variables
 
-According to the site [Computer Hope](), An environment
-variable is a dynamic "object" on a computer, containing
-an editable value, which may be used by one or more 
-software programs. In this project there are 3 very
+According to the site [Computer Hope](https://www.computerhope.com/jargon/e/envivari.htm), 
+An environment variable is a dynamic "object" on a computer,
+containing an editable value, which may be used by one or
+more software programs. In this project there are 3 very
 important ones
-* `PG_USER` -- PostgrSQL username [1](#PostgreSQL)
-* `PG_PSW` -- PostgrSQL password [1](#PostgreSQL)
+* `PG_USER` -- PostgrSQL username
+* `PG_PSW` -- PostgrSQL password 
 * `APP_KEY` -- Whenever you try to make a POST|PUT|PATCH request
-    you'll need to have this key [2](#App)
+    you'll need to have this key 
 
 You have two manners of including these variables. First is
 shown above. The other manner, but a little less safe is 
