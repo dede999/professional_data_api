@@ -1,13 +1,14 @@
 # Professional Data API
 
 ## Table of Contents
-1. **About It**
+1. [**About It**](#about-it)
 2. **Getting things ready**
     1. **Installing Ruby and Rails**
-    1. **Configuring environment**
+    2. **Configuring environment**
 3. **Contributing**
 4. **Notes to Consider**
 
+<a name="about-it"></a>
 ## About it
 
 This API is meant for showing your professional and/or 

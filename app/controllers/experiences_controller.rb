@@ -1,4 +1,6 @@
 class ExperiencesController < ApplicationController
+  include ApplicationHelper
+  before_action :password, only: [:create, :update, :destroy]
   before_action :set_experience, only: [:show, :update, :destroy]
 
   # GET /experiences
@@ -17,7 +19,9 @@ class ExperiencesController < ApplicationController
   def create
     @experience = Experience.new(experience_params)
 
-    if @experience.save
+    if @auth_errors.any?
+      render json: @auth_errors, status: :unauthorized
+    elsif @experience.save
       render json: @experience, status: :created, location: @experience
     else
       render json: @experience.errors, status: :unprocessable_entity
@@ -26,7 +30,9 @@ class ExperiencesController < ApplicationController
 
   # PATCH/PUT /experiences/1
   def update
-    if @experience.update(experience_params)
+    if @auth_errors.any?
+      render json: @auth_errors, status: :unauthorized
+    elsif @experience.update(experience_params)
       render json: @experience
     else
       render json: @experience.errors, status: :unprocessable_entity
@@ -35,7 +41,11 @@ class ExperiencesController < ApplicationController
 
   # DELETE /experiences/1
   def destroy
-    @experience.destroy
+    if !@auth_errors.empty?
+      render json: @auth_errors, status: :unauthorized
+    else
+      @experience.destroy
+    end
   end
 
   private
@@ -46,6 +56,7 @@ class ExperiencesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def experience_params
-      params.require(:experience).permit(:nane, :start, :final, :description)
+      params.require(:experience).permit(:title, :first_day, :last_day,
+                                         :description, :company)
     end
 end

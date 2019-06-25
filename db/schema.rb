@@ -16,9 +16,10 @@ ActiveRecord::Schema.define(version: 2019_05_27_035524) do
   enable_extension "plpgsql"
 
   create_table "experiences", force: :cascade do |t|
-    t.string "nane"
-    t.string "start"
-    t.string "final"
+    t.string "title"
+    t.string "company"
+    t.string "first_day"
+    t.string "last_day"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

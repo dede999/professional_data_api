@@ -1,3 +1,4 @@
 class ExperienceSerializer < ActiveModel::Serializer
-  attributes :id, :nane, :start, :final, :description
+  attributes :id, :title, :first_day,
+             :last_day, :description, :company
 end
