@@ -4,7 +4,7 @@
 1. [**About It**](#about-it)
 2. [**Getting things ready**](#get-things-ready)
     1. [**Installing Ruby and Rails**](#install-ruby-on-rails)
-    2. [**Configuring environment**](#environment)
+    2. [**Configuring environment**](#enviroment)
 3. [**Contributing**](#contributing)
 4. [**Notes to Consider**](#notes)
 
