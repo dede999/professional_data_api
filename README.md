@@ -2,11 +2,11 @@
 
 ## Table of Contents
 1. [**About It**](#about-it)
-2. **Getting things ready**
-    1. **Installing Ruby and Rails**
-    2. **Configuring environment**
-3. **Contributing**
-4. **Notes to Consider**
+2. [**Getting things ready**](#get-things-ready)
+    1. [**Installing Ruby and Rails**](#install-ruby-on-rails)
+    2. [**Configuring environment**](#environment)
+3. [**Contributing**](#contributing)
+4. [**Notes to Consider**](#notes)
 
 <a name="about-it"></a>
 ## About it
@@ -36,8 +36,10 @@ works, check out the Wiki when it's ready.
 
 Enough talking, let's get to the code
 
+<a name="get-things-ready"></a>
 ## Getting things ready
 
+<a name="install-ruby-on-rails"></a>
 ### Installing Ruby and Rails
 
 ``` console
@@ -73,6 +75,7 @@ user@pc $ rails [-v|--version]
 Now we have everything installed, we can now to to the 
 next step.
 
+<a name="enviroment"></a>
 ### Configuring environment
 
 In order to create an environment for development,test
@@ -96,16 +99,17 @@ An environment variable is a dynamic "object" on a computer,
 containing an editable value, which may be used by one or
 more software programs. In this project there are 3 very
 important ones
-* `PG_USER` -- PostgrSQL username
-* `PG_PSW` -- PostgrSQL password 
+* `PG_USER` -- PostgrSQL username [1](#postgres)
+* `PG_PSW` -- PostgrSQL password [1](#postgres)
 * `APP_KEY` -- Whenever you try to make a POST|PUT|PATCH request
-    you'll need to have this key 
+    you'll need to have this key [2](#app-key)
 
 You have two manners of including these variables. First is
 shown above. The other manner, but a little less safe is 
 creating an `.env` file. It will offer you no headaches if
 you keep this file on the `.gitgnore` 
 
+<a name="contributing"></a>
 ## Contributing
 
 Feel free to use, clone and fork this project. And don't 
@@ -114,14 +118,18 @@ have you have something in mind to make this more useful
 and/or accessible. There is a lot of things to implement,
 so fell free to come along. 
 
+<a name="notes"></a>
 ## Notes to Consider
 
+<a name="ruby-v"></a>
 ### Ruby Version
 It's 2.5.5 by now, but I will change.
 
+<a name="postgres"></a>
 ### PostgreSQL variables
 Gotta check this, but likely to be useless on production
 
+<a name="app-key"></a>
 ### App Key
 Since it's a single-user application, I found no need to
 create an authentication system. This env variable is set
