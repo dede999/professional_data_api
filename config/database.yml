@@ -18,9 +18,9 @@ default: &default
   adapter: postgresql
   encoding: unicode
   reconnect: false
-  username: postgres
+  username: <%= ENV['PG_USER'] %>
   # It is important that the password must be hidden
-  password: <%= ENV['PSQL_PWD'] %>
+  password: <%= ENV['PG_PSW'] %>
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
